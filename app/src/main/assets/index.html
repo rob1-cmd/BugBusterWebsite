@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bug Buster: Code Repair and Debugging Service</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1>Bug Buster</h1>
+    <p>Professional debugging and code repair service at your fingertips.</p>
+</header>
+
+<!-- Main Content -->
+<main>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Code Debugging</h3>
+            <p>We identify and fix bugs in your code, ensuring smooth functionality and performance.</p>
+        </div>
+        <div class="service-item">
+            <h3>Performance Optimization</h3>
+            <p>Enhance the speed and efficiency of your website or app with our optimization services.</p>
+        </div>
+        <div class="service-item">
+            <h3>API and Database Integration</h3>
+            <p>Resolve issues with API calls or database queries for seamless back-end operations.</p>
+        </div>
+    </section>
+
+    <!-- Code Upload Form -->
+    <section id="upload">
+        <h2>Submit Your Code</h2>
+        <p>Upload your code files and describe the issues you're facing. We'll review and provide solutions.</p>
+
+        <form action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="description">Issue Description:</label>
+            <textarea id="description" name="description" rows="5" placeholder="Describe the bug you're facing" required></textarea>
+
+            <label for="category">Issue Category:</label>
+            <select id="category" name="category" required>
+                <option value="frontend">Front-end</option>
+                <option value="backend">Back-end</option>
+                <option value="database">Database</option>
+                <option value="api">API</option>
+            </select>
+
+            <label for="file">Upload Your Code File:</label>
+            <input type="file" id="file" name="file" accept=".zip,.rar,.java,.cpp,.py,.js" required>
+
+            <label for="snippet">Optional: Paste a Code Snippet</label>
+            <textarea id="snippet" name="snippet" rows="5" placeholder="Paste a short code snippet here"></textarea>
+
+            <input type="submit" value="Submit for Review">
+        </form>
+    </section>
+
+    <!-- Pricing & Estimation Section -->
+    <section id="pricing">
+        <h2>Estimate Time & Cost</h2>
+        <form id="estimateForm">
+            <label for="lines">Lines of Code (Approx.):</label>
+            <input type="number" id="lines" name="lines" min="1" required>
+
+            <label for="complexity">Complexity Level:</label>
+            <select id="complexity" name="complexity" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <button type="button" onclick="calculateEstimate()">Get Estimate</button>
+            <p id="estimateOutput"></p>
+        </form>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-item">
+            <blockquote>
+                "Bug Buster helped fix critical bugs in our app within hours. Highly recommend!"
+            </blockquote>
+            <cite>- Sarah, App Developer</cite>
+        </div>
+        <div class="testimonial-item">
+            <blockquote>
+                "Amazing service! They optimized our database queries and improved app speed significantly."
+            </blockquote>
+            <cite>- John, CTO</cite>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How long does it take to get a bug fixed?</h3>
+            <p>It depends on the complexity of the issue. Most small bugs are resolved within 24-48 hours.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What types of code can you debug?</h3>
+            <p>We work with a variety of programming languages including Java, Python, JavaScript, and C++.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Bug Buster | All Rights Reserved</p>
+</footer>
+
+<!-- Live Chat Widget -->
+<div id="liveChat">
+    <button onclick="openChat()">💬 Live Chat</button>
+</div>
+
+</body>
+</html>
+
+
+
